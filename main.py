@@ -10,10 +10,13 @@ def home():
     return render_template('home.html',**context)
 
 
-@app.route('/about')
+@app.route('/about/')
 def about():
     context={
         'title': 'About Page',
         'content': 'This is the about page content.'
     }
     return render_template('about.html',**context)
+
+if __name__ == '__main__':
+    app.run()
